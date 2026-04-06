@@ -21,6 +21,7 @@ app = FastAPI(middleware=[
     lifespan=lifespan
 )   
 
+
 app.include_router(router)
 app.include_router(api_router)
 app.mount("/static", static_files, name="static")
